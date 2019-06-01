@@ -1,0 +1,10 @@
+.main {
+  background-color: lightgrey;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+/*.key:hover {
+  font-size: 15pt;
+}*/
