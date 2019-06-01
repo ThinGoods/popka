@@ -14,6 +14,20 @@
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 14pt;
-
+  transition: 1s;
 }
 
+.long_description {
+  display: none;
+}
+
+.btn_expand, .btn_unexpand {
+  font-weight: bolder;
+  font-size: 25pt;
+  color: blue;
+  cursor: pointer;
+}
+
+.btn_unexpand {
+  display: none;
+}
