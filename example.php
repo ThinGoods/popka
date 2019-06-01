@@ -16,7 +16,7 @@ connectDB();
 //  <= connect to DB
 
 
-echo "<br><br>";
+echo "<br><br>"; 
 
 
 $answer = $mysqli->query("SELECT * FROM `chyvaki`");
