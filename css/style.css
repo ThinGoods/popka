@@ -10,11 +10,10 @@
   margin: 10px;
   padding: 10px;
   border: 2px solid #353535;
-
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 14pt;
-  transition: 1s;
+  transition: 2s;
 }
 
 .long_description {
@@ -31,3 +30,10 @@
 .btn_unexpand {
   display: none;
 }
+
+.submenu_item {
+	overflow: hidden; }
+	
+.selector a:hover .submenu {
+	display: block;  }
+
