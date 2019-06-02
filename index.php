@@ -11,7 +11,6 @@
 </head>
 
 <body>
-	<h1 class="jack"> Jackie </h1>
 <?php require("nav.php"); ?>
 <?php require_once __DIR__."/function/connectMySQL/connect_to_db.php";
 	  global $mysqli;
@@ -66,3 +65,7 @@ iteration(itemsOfHideButtons, 'block', 'none');
 </script>
 </body>
 </html>
+
+
+<!-- меню разварачивается при клике что бы можно было лучше контролировать поведение страницы
+ ДЛЯ ЗАЩИТЫ -->

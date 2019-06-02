@@ -1,3 +1,8 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
 .main {
   background-color: lightgrey;
   padding: 5px;
@@ -13,7 +18,7 @@
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 14pt;
-  transition: 2s;
+  transition: 1s;  /*не работает*/
 }
 
 .long_description {
@@ -30,10 +35,27 @@
 .btn_unexpand {
   display: none;
 }
+.menu_item {
+    background: #eee;
+    /*float: left;
+    /*width: 10%;*/
+    /*margin-right: 2%;*/
+    /*padding: 10px;*/
+    /*border: 1px solid #ccc;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/*/
+  }
+  .parent {
+  	display: flex;
+  	flex-direction: row;
+  	/* align-items: center; */ 
+  	justify-content: space-between;
+  }
+  .submenu_item {
+  	background-color: grey;
+  }
 
-.submenu_item {
-	overflow: hidden; }
-	
-.selector a:hover .submenu {
-	display: block;  }
-
+  .hide_menu {
+  	display: none;
+  }
