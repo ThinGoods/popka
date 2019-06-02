@@ -42,6 +42,7 @@
 
   <div class="menu_item"><a href="#"> Запобігання корупції </a></div>
 </div>
+<!-- Конец меню -->
 
 <script type="text/javascript"> 
 function hiding (submenu) {

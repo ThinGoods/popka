@@ -3,6 +3,9 @@
 <head>
 	<title> sadasd as</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		.long_description { display: block; }
+	</style>
 </head>
 <body>
   <?php require("nav.php"); ?>
@@ -25,16 +28,12 @@ require_once __DIR__."/function/connectMySQL/connect_to_db.php";
 	for($i = 0; $i < count($currentData); $i++){
 	  if( ($i % 6) == 0){
 	  	echo "
-	  	  <div class='news'>
-	  	  	<div class='left_part_news'>
-	  	  	 	<img class='image_news' src= ".$currentData[$i+5].">
-	  	  	 </div>
-	  	  	<div class='right_part_news'>
-				<div class='title_news'>".$currentData[$i+1]."</div>
-	  	  		<div class='short_description'>".mb_strimwidth($currentData[$i+3], 0, 200, '.....')."</div>
-	  	  		<div class='long_description'>".$currentData[$i+3]."</div>
-	  	  		<div class='date_news'>".$currentData[$i+4]."</div>
-	  	  	</div>
+	  	  <div class='full_news'>
+	  	  	 	<img class='image_fullnews' src= ".$currentData[$i+5].">	  	  	 	  	
+				<div class='title_fullnews'>".$currentData[$i+1]."</div>
+	  	  		<div class='long_fulldescription'>".$currentData[$i+3]."</div>
+	  	  		<div class='date_fullnews'>".str_replace('-', '.',substr ( $currentData[$i+4] , 0, 10))."</div>
+	  	  	
 	  	  </div>
 	  	  ";
 	  }
