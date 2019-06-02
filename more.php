@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Головна хуйня </title>
+	<title> sadasd as</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<style>
-		html * {text-decoration: none;}
-	</style>
-
 </head>
-
 <body>
-<?php require("nav.php"); ?>
-<?php require_once __DIR__."/function/connectMySQL/connect_to_db.php";
+  <?php require("nav.php"); ?>
+
+	<?php 
+	  echo ($_GET['id']);
+
+require_once __DIR__."/function/connectMySQL/connect_to_db.php";
+
+
 	  global $mysqli;
 	  connectDB();
  
-	  $answer = $mysqli->query("SELECT * FROM `news` ORDER BY `date` DESC");
+	  $answer = $mysqli->query("SELECT * FROM `news` WHERE id = ".$_GET['id']);
 	  while(($row = $answer->fetch_assoc()) != false ){ $data[] = $row; }
      	foreach($data as $key=>$value){
      		foreach($value as $keyData => $valueData) { $currentData[] = $valueData; }
@@ -33,20 +33,12 @@
 				<div class='title_news'>".$currentData[$i+1]."</div>
 	  	  		<div class='short_description'>".mb_strimwidth($currentData[$i+3], 0, 200, '.....')."</div>
 	  	  		<div class='long_description'>".$currentData[$i+3]."</div>
-	  	  		<div class='title_news'> <a  class='a-normal' href='/popka/more.php?more&id=".$currentData[$i]."'> sasd </a> </div>
-
 	  	  		<div class='date_news'>".$currentData[$i+4]."</div>
 	  	  	</div>
 	  	  </div>
 	  	  ";
 	  }
 	}
-
-	/*-----------------------------
-	   ВЫВОД НОВОСТЕЙ С БАЗЫ ДАННЫХ
-	-----------------------------*/
-?>
-
+  ?>
 </body>
 </html>
-
