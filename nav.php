@@ -6,29 +6,29 @@
 </div>
 
 <div class="parent">
- <a href="index.php"> <div class="menu_item">Головна</div></a>
-
+  <a href="index.php"> <div class="menu_item">Головна</div></a>
     <div class="menu_item" id="list-1" data-show = "false"> Про філію
-     <div class="hide_menu"> 								  
-                                    <a href="#"><div class="submenu_item">Історична довідка</div></a>
-                                    <a href="#"><div class="submenu_item">Керівництво</div></a>
-                                    <a href="#"><div class="submenu_item">Вчена рада</div></a>
-                                    <a href="#"><div class="submenu_item">Контакти</div></a>
-                                    <a href="#"><div class="submenu_item">Державні закупівлі</div></a> 
-     </div>
 
+      <div class="hide_menu"> 								  
+        <a href="history_dovidka.php"><div class="submenu_item">Історична довідка</div></a>
+        <a href="kerivnuctvo.php"><div class="submenu_item">Керівництво</div></a>
+        <a href="vchena_rada.php"><div class="submenu_item">Вчена рада</div></a>
+        <a href="#"><div class="submenu_item">Контакти</div></a>
+        <a href="derzh_zakypki.php"><div class="submenu_item">Державні закупівлі</div></a> 
+      </div>
     </div>
 
- <div class="menu_item"> <a href="#"> Структура філії </a></div>
- <div class="menu_item"> <a href="#"> Міжнародна діяльність </a></div>
- <div class="menu_item" id="list-2" data-show = "false"> Абітурієнту
-    	<div class="hide_menu"> 
-                                     <a href="#"><div class="submenu_item">Загальна інформація</div></a>
-                                     <a href="#"><div class="submenu_item">Умови вступу</div></a>
-                                     <a href="#"><div class="submenu_item">Підготовчі курси</div></a>
-                                     <a href="#"><div class="submenu_item">Питання - відповіді</div></a>
-        </div>
+  <div class="menu_item"> <a href="struktura_filii.php"> Структура філії </a></div>
+  <div class="menu_item"> <a href="international_activity.php"> Міжнародна діяльність </a></div>
+  <div class="menu_item" id="list-2" data-show = "false"> Абітурієнту
+    <div class="hide_menu"> 
+      <a href="#"><div class="submenu_item">Загальна інформація</div></a>
+      <a href="#"><div class="submenu_item">Умови вступу</div></a>
+      <a href="#"><div class="submenu_item">Підготовчі курси</div></a>
+      <a href="#"><div class="submenu_item">Питання - відповіді</div></a>
     </div>
+  </div>
+
  <div class="menu_item"> <a href="#"> Наука </a></div>
 
     <div class="menu_item" id="list-3" data-show = "false"> Студентське життя
