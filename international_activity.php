@@ -27,10 +27,10 @@
 	  	  	 	<img class='image_news' src= ".$currentData[$i+4].">
 	  	  	 </div>
 	  	  	<div class='right_part_news'>
-				<div class='title_news'>".$currentData[$i+1]."</div>
-	  	  		<div class='short_description'>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
-	  	  		<div class='long_description'>".$currentData[$i+2]."</div>
-	  	  		<div class='title_news'> <a  class='a-normal' href='/popka/more.php?more&id=".$currentData[$i]."'> Детальніше </a> </div>
+				<div>".$currentData[$i+1]."</div>
+	  	  		<div>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
+	  	  		<div>".$currentData[$i+4]."</div>
+	  	  		<div> <a class='a-normal' href='/popka/more.php?more&id=".$currentData[$i]."'> Детальніше </a> </div>
 				<div class='date_news'>".str_replace('-', '.',substr ( $currentData[$i+4] , 0, 10))."</div>
 
 	  	  	</div>
