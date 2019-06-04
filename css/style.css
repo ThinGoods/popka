@@ -23,15 +23,15 @@ a {
   	flex-direction: row;
   	justify-content: space-between;
   	background: #0e5861;
-	color: white;
-	padding-left: 15%;
-	padding-right: 15%;
-	font-weight: bold;
+	  color: white;
+	  padding-left: 15%;
+	  padding-right: 15%;
+	  font-weight: bold;
   }
   .menu_item {
     padding: 10px;
-	cursor: pointer;
-	transition: 0.5s;
+	  cursor: pointer;
+	  transition: 0.5s;
   }
   .menu_item:hover {
   	background-color: #0e7a61;

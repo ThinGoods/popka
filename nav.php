@@ -22,10 +22,10 @@
   <div class="menu_item"> <a href="international_activity.php"> Міжнародна діяльність </a></div>
   <div class="menu_item" id="list-2" data-show = "false"> Абітурієнту
     <div class="hide_menu"> 
-      <a href="#"><div class="submenu_item">Загальна інформація</div></a>
-      <a href="#"><div class="submenu_item">Умови вступу</div></a>
-      <a href="#"><div class="submenu_item">Підготовчі курси</div></a>
-      <a href="#"><div class="submenu_item">Питання - відповіді</div></a>
+      <a href="zagalna_information.php"><div class="submenu_item">Загальна інформація</div></a>
+      <a href="ymovu_vstypy.php"><div class="submenu_item">Умови вступу</div></a>
+      <a href="pidgotovchi_kyrsu.php"><div class="submenu_item">Підготовчі курси</div></a>
+      <a href="Q_A.php"><div class="submenu_item">Питання - відповіді</div></a>
     </div>
   </div>
 

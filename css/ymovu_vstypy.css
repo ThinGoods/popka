@@ -1,0 +1,19 @@
+.ymovu_vstypy {
+  
+}
+.head {
+	text-align: center;
+}
+.text {
+  font-size: 14pt;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+  display: row;
+  color: grey;
+  width: 70%;
+  flex-direction: row;
+}
+.
