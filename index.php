@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Головна хуйня </title>
+	<title> Головна </title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/news.css">
-
 	<style>
 		html * {text-decoration: none;}
 	</style>

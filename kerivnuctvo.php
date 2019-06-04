@@ -10,21 +10,6 @@
 
   <div class="kerivnuctvo"> Керівництво </div>
 
-  <div>
-
-  	<div>
-  		<img class="chuvaki_img" src="img/chuvaki/lukash.jpg">
-  	</div>
-
-  	<div>
-  		<img class="chuvaki_img" src="img/chuvaki/naumenko.jpg">
-  	</div>
-
-  	<div>
-  		<img class="chuvaki_img" src="img/chuvaki/vashchenko.jpg">
-  	</div>
-
-
   </div>
 
   <div class="grafic"> ГРАФІК </div>
