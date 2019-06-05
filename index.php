@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> СфХНУВС </title>
+	<title> 
+	  <?php 
+	    require_once __DIR__."/function/connectMySQL/connect_to_db.php";
+	    global $mysqli;
+	    connectDB();
+	    $title = $mysqli->query("SELECT `ABC` FROM `settings`");
+	    while(($row_title = $title->fetch_assoc()) != false ){ $data_title[] = $row_title; }
+     	foreach($data_title as $key_title=>$value_title){
+     		foreach($value_title as $keyDataTitle => $valueDataTitle) { $currentDataTitle[] = $valueDataTitle; }
+	    }   
+	    echo $valueDataTitle;  
+	  ?>  	
+	</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/news.css">
 	<style>
