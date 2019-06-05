@@ -5,7 +5,9 @@
 	<title>Admin Panel</title>
 </head>
 <body>
-  <a href="news_admin.php"><div>News</div></a>
+  <a href="news_admin.php"><div>Новости</div></a>
+  <a href="leadership_admin.php"><div>Руководство</div></a>
+  <a href="settings_admin.php"><div>Основные параметры</div></a>
   <?php require_once "../function/connectMySQL/connect_to_db.php"; 
     global $mysqli; connectDB(); 
   ?>

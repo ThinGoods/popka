@@ -30,7 +30,7 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'], $_FILES['image'])
   addOptionalImage($_FILES['image8']);
   addOptionalImage($_FILES['image9']);
   addOptionalImage($_FILES['image10']);
-
+  
   echo $full_src;
   $title = $_POST['title'];
   $full_text = $_POST['full_text'];
@@ -46,7 +46,7 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'], $_FILES['image'])
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>News</title>
+	<title>Новости</title>
 	<style>
 		.form_added, .form_deleted {
 		  display: flex;

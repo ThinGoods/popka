@@ -53,6 +53,13 @@
   	.item_l {
   	  padding: 3px;
   	}
+    .id_l {
+      background-color: #0e5861;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -73,14 +80,15 @@
 	  if( ($i % 7) == 0){
 	  	echo "
 	  	  <div class='leader_l'>
-	  	  		<img class='image_l' src= ".$currentDataLeader[$i+6].">
-	  	  		<div class='description'>
-	  	          <div class='position_l item_l'>".$currentDataLeader[$i+5]."</div>
-				  <div class='name_l item_l'>".$currentDataLeader[$i+1]."</div>
-	  	  		  <div class='activity_l item_l'>".$currentDataLeader[$i+3]."</div>
-				  <div class='date_time_l item_l'>".$currentDataLeader[$i+2].' - '.$currentDataLeader[$i+4]."</div>
-				</div>
-	  	  </div>
+	  	  	<img class='image_l' src= ".$currentDataLeader[$i+6].">
+	  	  	<div class='description'>
+	  	      <div class='position_l item_l'>".$currentDataLeader[$i+5]."</div>
+				    <div class='name_l item_l'>".$currentDataLeader[$i+1]."</div>
+	  	  		<div class='activity_l item_l'>".$currentDataLeader[$i+3]."</div>
+				    <div class='date_time_l item_l'>".$currentDataLeader[$i+2].' - '.$currentDataLeader[$i+4]."</div>
+				  </div>
+          <div class='id_l item_l'>".$currentDataLeader[$i]."</div>
+	  	  </div><
 	  	  ";
 	    }
 	  }
