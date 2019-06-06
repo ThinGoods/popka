@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> sadasd as</title>
+	<title> Новини </title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
@@ -121,6 +121,6 @@
 	  }
 	}
   ?>
- 
+
 </body>
 </html>

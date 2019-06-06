@@ -23,15 +23,17 @@
 	  if( ($i % 5) == 0){
 	  	echo "
 	  	  <div class='news'>
-	  	  	<div class='left_part_news'>
-	  	  	 	<img class='image_news' src= ".$currentData[$i+4].">
-	  	  	 </div>
+
 	  	  	<div class='right_part_news'>
+
 				<div>".$currentData[$i+1]."</div>
+
 	  	  		<div>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
-	  	  		<div>".$currentData[$i+4]."</div>
-	  	  		<div> <a class='a-normal' href='/popka/more.php?more&id=".$currentData[$i]."'> Детальніше </a> </div>
-				<div class='date_news'>".str_replace('-', '.',substr ( $currentData[$i+4] , 0, 10))."</div>
+
+	  	  		<div> <a class='a-normal' href='/popka/more_international activity.php?more&id=".$currentData[$i]."'> Детальніше </a> </div>
+
+				
+				
 
 	  	  	</div>
 	  	  </div>
@@ -40,11 +42,11 @@
 	}
 
 	/*-----------------------------
-	   ВЫВОД НОВОСТЕЙ С БАЗЫ ДАННЫХ
+	   ВЫВОД НОВОСТЕЙ С БАЗЫ ДАННЫХ 
+	  	  		// <div>".$currentData[$i+4]."</div>
 	-----------------------------*/
 ?>
   </div>
-
 
 </body>
 </html>

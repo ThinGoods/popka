@@ -1,5 +1,7 @@
 .international_activity {
 	text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
 }
 .title {
 	color: red;
@@ -29,7 +31,7 @@
 }
 
 .right_part_news {
-	width: 75%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;

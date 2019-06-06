@@ -25,6 +25,20 @@
 <div class="go_to_up" id="go_to_up">
   <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 </div>
+<style type="text/css">
+   .go_to_up {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 40pt;
+  margin: 15px;
+  color: #0e5861;
+  cursor: pointer;
+ }
+ .go_to_up:hover {
+   color: #0e7a61;
+ }
+</style>
 
 <script type="text/javascript">
   document.getElementById('go_to_up').addEventListener('click', function(){

@@ -40,13 +40,53 @@
     <div class="menu_item" id="list-3" data-show = "false"> Студентське життя
     	<div class="hide_menu">
         <a href="ELSA.php"><div class="submenu_item">ELSA</div></a>
-        <a href="#"><div class="submenu_item">Спорт</div></a>
-        <a href="#"><div class="submenu_item">Юридична клініка</div></a>
+        <a href="sport.php"><div class="submenu_item">Спорт</div></a>
+        <a href="legal_clinic.php"><div class="submenu_item">Юридична клініка</div></a>
         <a href="students_parlament.php"><div class="submenu_item">Студентський парламент</div></a>
       </div>
     </div>
   <div class="menu_item"><a href="http://www.univd.edu.ua/uk/dir/1610/zapobigannya-koruptsii"> Запобігання корупції </a></div>
 </div>
+<style type="text/css">
+     .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #0e5861;
+    color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-weight: bold;
+  }
+  .menu_item {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .menu_item:hover {
+    background-color: #0e7a61;
+    border-radius: 10px;
+  }
+  .hide_menu {
+    display: none;
+    position: absolute;
+    background-color: #0e5861;
+    margin-top: 10px;
+    margin-left: -2%;
+    padding: 5px;
+    padding-top: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid #0e7a61;
+  }
+  .submenu_item {
+     padding: 7px;
+     border-radius: 5px;
+  }
+  .submenu_item:hover {
+    background-color: #0e7a61;
+  }
+</style>
 <!-- Конец меню -->
 
 <script type="text/javascript"> 
