@@ -8,7 +8,7 @@
 <body>
   <?php require("nav.php"); ?>
   <div>
-  	<div class="international_activity"> Міжнародна діяльність </div>
+  	<!-- <div class="international_activity"> Міжнародна діяльність </div> -->
  	<?php require_once __DIR__."/function/connectMySQL/connect_to_db.php";
 	  global $mysqli;
 	  connectDB();
@@ -24,11 +24,11 @@
 	  	echo "
 	  	  <div class='news'>
 
-	  	  	<div class='right_part_news'>
+	  	  	<div>
 
-				<div>".$currentData[$i+1]."</div>
+				<div class='title'>".$currentData[$i+1]."</div>
 
-	  	  		<div>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
+	  	  		<div class='description'>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
 
 	  	  		<div> <a class='a-normal' href='/popka/more_international activity.php?more&id=".$currentData[$i]."'> Детальніше </a> </div>
 

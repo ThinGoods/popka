@@ -46,16 +46,17 @@
   font-weight: bolder;
   transition: 0.5s;
   margin: 20px;
-  padding: 5px;
+  
+/*  padding: 5px;
   padding-left: 10px;
-  padding-right: 10px;
-  box-shadow: 3px 3px 10px 5px #0e5861;
+  padding-right: 10px;*/
+/*  box-shadow: 3px 3px 10px 5px #0e5861;*/
   border-radius: 10px;
 }
 .more:hover {
   font-size: 20pt;
-  box-shadow: 3px 3px 10px 5px #0e5861;
-}
+/*  box-shadow: 3px 3px 10px 5px #0e5861;
+*/}
 
 .long_description {
   display: none;

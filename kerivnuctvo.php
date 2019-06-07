@@ -19,7 +19,7 @@
   	}
   	.leader_l {
   	  display: flex;
-  	  flex-direction: row;
+  	  flex-direction: column;
   	  justify-content: flex-start;
   	  align-items: center;
   	  margin: 20px;
@@ -31,7 +31,7 @@
   	  flex-direction: column;
   	  justify-content: center;
   	  align-items: center;
-	  background-color: #0e5861;
+	    background-color: #0e5861;
   	  color: white;
   	  padding: 20px;
   	  margin: 20px;
@@ -41,14 +41,19 @@
   	.image_l {
   	  width: 400px;
   	  border-left: 8px solid #0e5861;
+      border-right: 8px solid #0e5861;
   	  border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
   	  transition: 0.5s;
   	  cursor: pointer;
+     
   	}
   	.image_l:hover {
-  	  width: 450px;
+  	  width: 450px; 
   	  border-left: 8px solid #0e5861;
+      border-right: 8px solid #0e5861;
   	  border-top-left-radius: 25%;
+      border-top-right-radius: 25%;
   	}
   	.item_l {
   	  padding: 3px;

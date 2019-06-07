@@ -10,34 +10,38 @@
       require_once __DIR__."/function/connectMySQL/connect_to_db.php";
       global $mysqli;
       connectDB();
-      $leader = $mysqli->query("SELECT * FROM `students_parlament` ORDER BY `id` DESC");
-      echo "$leader";
-      while(($row_leader = $leader->fetch_assoc()) != false ){ $data_leader[] = $row_leader; }
-        foreach($data_leader as $key_leader=>$value_leader){
-          foreach($value_leader as $keyDataLeader => $valueDataLeader) { $currentDataLeader[] = $valueDataLeader; }
+      $student = $mysqli->query("SELECT * FROM `students_parlament`");  
+      $description = $mysqli->query("SELECT * FROM `description_for_students_parlament`");
+      while(($row_description = $description->fetch_assoc()) != false ){
+        $description_true = $row_description['description_for_students_parlament'];
+      }
+
+      while(($row_leader_student = $student->fetch_assoc()) != false ){ 
+        $data_leader_student[] = $row_leader_student; 
+      }
+        foreach($data_leader_student as $key_leader=>$value_leader){
+          foreach($value_leader as $keyDataLeader => $valueDataLeader) { 
+            $currentDataLeaderStudent[] = $valueDataLeader; }
         }
      ?> 
-<div class="leadership"> Студентський парламент Сумської філії Харківського національного університету внутрішніх справ </div>
-  <?php $description_students_parliament = $mysqli->query ("SELECT * FROM 'students_parlament`");
-  ?>
+<div>Студентський парламент</div>
+<div><?php echo $description_true; ?></div>
+<div class="students_parlament"> Студентський парламент Сумської філії Харківського національного університету внутрішніх справ </div>
   <?php
-    for($i = 0; $i < count($currentDataLeader); $i++){
+    for($i = 0; $i < count($currentDataLeaderStudent); $i++){
 	  if( ($i % 5) == 0){
 	  	echo "
 	  	  <div class='leader_l'>
-	  	  	<img class='image_l' src= ".$currentDataLeader[$i+6].">
+	  	  	<img class='image_l' src= ".$currentDataLeaderStudent[$i+4].">
 	  	  	<div class='description'>
-	  	      <div class='position_l item_l'>".$currentDataLeader[$i+5]."</div>
-				    <div class='name_l item_l'>".$currentDataLeader[$i+1]."</div>
-	  	  		<div class='activity_l item_l'>".$currentDataLeader[$i+3]."</div>
-				    <div class='date_time_l item_l'>".$currentDataLeader[$i+2].' - '.$currentDataLeader[$i+4]."</div>
-				  </div>
-          <div class='id_l item_l'>".$currentDataLeader[$i]."</div>
-	  	  </div><
+	  	      <div class='position_l item_l'>".$currentDataLeaderStudent[$i+3]."</div>
+				    <div class='name_l item_l'>".$currentDataLeaderStudent[$i+1].$currentDataLeaderStudent[$i+2]."</div>
+          <div class='id_l item_l'>".$currentDataLeaderStudent[$i]."</div>
+	  	  </div>
 	  	  ";
 	    }
 	  }
-	?> 
-  
+	?>  
+   
 </body>
 </html>

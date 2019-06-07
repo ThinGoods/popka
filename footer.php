@@ -42,6 +42,6 @@
 
 <script type="text/javascript">
   document.getElementById('go_to_up').addEventListener('click', function(){
-  	document.body.scrollTop = document.documentElement.scrollTop = 0;
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   });   
 </script>
