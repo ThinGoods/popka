@@ -2,7 +2,7 @@
 <html>
 <head>
   <title> Керівництво </title>
-  <link rel="stylesheet" type="text/css" href="css/kerivnuctvo.css">
+<!--   <link rel="stylesheet" type="text/css" href="css/kerivnuctvo.css"> -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <style type="text/css">
   	.leadership {
@@ -20,10 +20,10 @@
   	.leader_l {
   	  display: flex;
   	  flex-direction: column;
-  	  justify-content: flex-start;
+  	  justify-content: center;
   	  align-items: center;
-  	  margin: 20px;
-  	  margin-left: 20%;
+/*  	  margin: 20px;*/
+/*  	  margin-left: 20%;*/
   	  transition: 0.5s;
   	}
   	.description {

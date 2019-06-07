@@ -3,6 +3,7 @@
 <head>
 	<title> Новини </title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/ELSA.css">
 	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -40,11 +41,6 @@
 	  	  	  }
 	  	  	?>
 	  	  </div>
-	  	  <div class='date_fullnews'><?php 
-	  	  for($key_date = 0; $key_date < 3; $key_date++){
-	  	 	$data_date[] = explode('.', str_replace('-', '.',substr ( $currentData[$i+4] , 0, 10)))[$key_date];
-	  	  } echo "$data_date[2].$data_date[1].$data_date[0]";
-	  	  ?></div>
 	  	</div> 	  	
 	  	<?php
 	  }

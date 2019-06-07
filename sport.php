@@ -3,7 +3,8 @@
 <head>
   <title> Спорт </title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/ELSA.css">
+  <link rel="stylesheet" type="text/css" href="css/sport.css">
+
 </head>
 <body>
   <?php require("nav.php"); ?>
@@ -26,7 +27,7 @@
               <img class='image_news' src= ".$currentData[$i+3].">
              </div>
              <div class='right_part_news'>
-               
+               <div class='title_news'>".$currentData[$i+1]."</div>
                <div class='short_description'>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
                <a  class='a-normal' href='/popka/more_sport.php?more&id=".$currentData[$i]."'><div class='more'>  Детальніше...</div></a> 
              </div>

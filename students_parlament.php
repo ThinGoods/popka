@@ -3,6 +3,7 @@
 <head>
   <title> Студентський парламент </title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/students_parlament.css">
 </head>
 <body>
   <?php require("nav.php"); ?>
@@ -24,24 +25,24 @@
             $currentDataLeaderStudent[] = $valueDataLeader; }
         }
      ?> 
+<div class="container_for_everything">
 <div>Студентський парламент</div>
-<div><?php echo $description_true; ?></div>
+<div class="description_text_parlament"><?php echo $description_true; ?></div>
 <div class="students_parlament"> Студентський парламент Сумської філії Харківського національного університету внутрішніх справ </div>
   <?php
     for($i = 0; $i < count($currentDataLeaderStudent); $i++){
-	  if( ($i % 5) == 0){
+	  if( ($i % 4) == 0){
 	  	echo "
 	  	  <div class='leader_l'>
-	  	  	<img class='image_l' src= ".$currentDataLeaderStudent[$i+4].">
+	  	  	<img class='image_l' src= ".$currentDataLeaderStudent[$i+3].">
 	  	  	<div class='description'>
-	  	      <div class='position_l item_l'>".$currentDataLeaderStudent[$i+3]."</div>
-				    <div class='name_l item_l'>".$currentDataLeaderStudent[$i+1].$currentDataLeaderStudent[$i+2]."</div>
-          <div class='id_l item_l'>".$currentDataLeaderStudent[$i]."</div>
+	  	      <div class='position_l item_l'>".$currentDataLeaderStudent[$i+2]."</div>
+				    <div class='name_l item_l'>".$currentDataLeaderStudent[$i+1]."</div>
 	  	  </div>
 	  	  ";
 	    }
 	  }
 	?>  
-   
+</div>   
 </body>
 </html>

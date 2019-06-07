@@ -39,6 +39,7 @@
 }
 .title_news:hover {
   padding: 15px;
+  margin-right: 15px;
 }
 .more {
   color: #0e5861;
@@ -55,8 +56,8 @@
 }
 .more:hover {
   font-size: 20pt;
-/*  box-shadow: 3px 3px 10px 5px #0e5861;
-*/}
+
+}
 
 .long_description {
   display: none;

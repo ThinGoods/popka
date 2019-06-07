@@ -1,14 +1,7 @@
-.international_activity {
-	text-align: center;
-  margin-top: 10px;
-  font-size: 25px;
-}
 .title {
 	text-align: center;
 }
-
 /* news [start] */
-
 .news {
   background-color: white;
   font-size: 14pt;
@@ -26,15 +19,6 @@
 
 .left_part_news {
 	width: 25%;
-}
-
-.right_part_news {
-	width: 90%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	padding: 10px;
 }
 
 .title_news {
@@ -55,30 +39,10 @@
   display: none;
 }
 .date_news {
-/*	margin-right: 0;
-	position: absolute;*/
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	width: 100%;
-}
-
- /* news [end]*/
- /* news [start] */
-
-.news {
-  background-color: white;
-  font-size: 14pt;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-bottom: 6px solid #0e5861;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 .left_part_news {
@@ -103,26 +67,18 @@
   border-radius: 15px;
   transition: 0.5s;
 }
-.title:hover {
-  padding: 15px;
-}
+
 .more {
   color: #0e5861;
   font-size: 15pt;
   font-weight: bolder;
   transition: 0.5s;
   margin: 20px;
-  
-/*  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;*/
-/*  box-shadow: 3px 3px 10px 5px #0e5861;*/
   border-radius: 10px;
 }
 .more:hover {
   font-size: 20pt;
-/*  box-shadow: 3px 3px 10px 5px #0e5861;
-*/}
+}
 
 .long_description {
   display: none;
@@ -139,8 +95,6 @@
   display: none;
 }
 .date_news {
-/*  margin-right: 0;
-  position: absolute;*/
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -152,20 +106,7 @@
   transition: 0.5s;
   cursor: pointer;
 }
-.image_news:hover {
-  width: 330px;
-  border-radius: 20px;
-  border-left: 8px solid #0e7a61;
-}
- /* news [end]*/
- .a-normal {
-    color: #0e5861;
-  font-size: 15pt;
-  font-weight: bolder;
-  transition: 0.5s;
-  margin: 20px;
-  align-items: right;
-}
+
  .a-normal:hover {
-  font-size: 20pt;
+  font-size: 17pt;
 }
