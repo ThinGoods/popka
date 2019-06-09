@@ -10,27 +10,26 @@
 
   <div class="news">
   	<div>
-  		<a class="a-normal" href="#"><div class="title"> Інтернет-ресурси фондів і організацій, які пропонують грантову підтримку </div></a>
+  		<a class="a-normal" href="grantu.php"><div class="title"> Інтернет-ресурси фондів і організацій, які пропонують грантову підтримку </div></a>
   		<div class="description"> 
   		1.   Посольство США – http://ukrainian.ukraine.usembassy.gov/
   		2.   FLEX (Програма обміну майбутніх лідерів) – http://www.americancouncils.org.ua/uk/pages/7/flex.html.....
-		3.   Гранти Президента України –  http://www1.nas.gov.ua/nm/news/Pages/GrPU2014.aspx
-		4.   Міжнародний фонд «Відродження» – www.irf.kiev.ua/programs
+      3.   Гранти Президента України –  http://www1.nas.gov.ua/nm/news/Pages/GrPU2014.aspx 4.   Міжнародний фонд «Відродження» – www.irf.kiev.ua/programs
   	 	</div>
   	</div>
   </div>
 
   <div class="news">
   	<div>
-  		<a class="a-normal" href="#"><div class="title"> Про ELSA </div></a>
-  		<div class="description">  .....</div>
+  		<a class="a-normal" href="about_ELSA.php"><div class="title"> Про ELSA </div></a>
+  		<div class="description">  ELSA (The European Law Students' Association) — це міжнародна, незалежна, неполітична та неприбуткова організація, що об'єднує студенів-правників та молодих юристів, що зацікавлені в науковому та особистому вдосконаленні. Організація надає ідеальну базу для розвитку їхніх навичок, здобуття нових знань і спілкування з студентами права та юристами з усієї Європи......</div>
   	</div>
   </div>
 
   <div class="news">
   	<div>
   		<a class="a-normal" href="#"><div class="title"> Міжнародне та міжвузівське співробітництво </div></a>
-  		<div class="description">  .....</div>
+  		<div class="description">  Зростання ролі освіти та науки в суспільстві, диверсифікація, а також інтернаціоналізація вищої освіти – ці світові тенденції характеризують міжнародний компонент у діяльності університету як необхідну умову його комплексного розвитку. Міжнародне співробітництво було і залишається одним із пріоритетів розвитку Сумської філії Харківського національного університету внутрішніх справ......</div>
   	</div>
   </div>
 

@@ -47,11 +47,11 @@ a {
     padding: 10px;
     cursor: pointer;
     transition: 0.5s;
-  }
+}
   .menu_item:hover {
     background-color: #0e7a61;
     border-radius: 10px;
-  }
+}
   .hide_menu {
     display: none;
     position: absolute;

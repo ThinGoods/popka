@@ -51,8 +51,6 @@
            <li>  у листопаді 2017 року представники Сумського осередку ELSA  взяли участь XXVII National Council Meeting ELSA Ukraine в м. Чернівці.
         </div>
 
-      </div>
-
       <div class="container_for_img">
 
         <img src="img/about_elsa/1.jpg" class="images">

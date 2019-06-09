@@ -22,7 +22,7 @@
       font-size: 14pt;
     }
   	.container_faq {
-	
+	  
   	}
   	.head {
       padding: 10px;
