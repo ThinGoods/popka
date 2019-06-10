@@ -4,6 +4,103 @@
   <title> Наука </title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/science.css">
+  <style>
+    /* news [start] */
+
+.news {
+  background-color: white;
+  font-size: 14pt;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 6px solid #0e5861;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.left_part_news {
+  width: 25%;
+}
+
+.right_part_news {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.title_news {
+  background-color: #0e5861;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.title_news:hover {
+  padding: 15px;
+  margin-right: 15px;
+}
+.more {
+  color: #0e5861;
+  font-size: 15pt;
+  font-weight: bolder;
+  transition: 0.5s;
+  margin: 20px;
+  
+/*  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;*/
+/*  box-shadow: 3px 3px 10px 5px #0e5861;*/
+  border-radius: 10px;
+}
+.more:hover {
+  font-size: 20pt;
+
+}
+
+.long_description {
+  display: none;
+}
+
+.btn_expand, .btn_unexpand {
+  font-weight: bolder;
+  font-size: 25pt;
+  color: blue;
+  cursor: pointer;
+}
+
+.btn_unexpand {
+  display: none;
+}
+.date_news {
+/*  margin-right: 0;
+  position: absolute;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.image_news {
+  width: 300px;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.image_news:hover {
+  width: 330px;
+  border-radius: 20px;
+  border-left: 8px solid #0e7a61;
+}
+ /* news [end]*/
+  </style>
 </head>
 <body>
 <?php require("nav.php"); ?>

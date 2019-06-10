@@ -5,35 +5,34 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style>
 		.title {
-			background-color: #0e5861;
- 			color: white;
-  			text-align: center;
-  			padding: 10px;
-  			margin-bottom: 20px;
-  			border-radius: 15px;
-  			transition: 0.5s;
-  			margin-top: 10px;
-		}
-		.title:hover {
-			font-size: 14px;
+
+ 			color: black;
+  		text-align: center;
+  		padding: 10px;
+  		margin-bottom: 20px;
+      font-size: 25px;
+      margin: 0 auto;
+      width: 70%;
+
 		}
 		.list {
 			font-size: 20px;
 			color: black;
-      		border-left: 7px solid #0e5861;
-      		border-right: 7px solid #0e5861;
-      		border-radius: 15px;
-      		padding: 10px;
-      		margin: 10px;
-      		background-color: #8cd8a4;
+    	border-left: 7px solid #0e5861;
+     	border-right: 7px solid #0e5861;
+     	border-radius: 15px;
+  		padding: 10px;
+   		margin: 10px;
+   		background-color: #8cd8a4;
 		}
 		.list:hover {
 		  padding: 15px;
-          margin-right: 15px;
-          font-size: 30px;
+      margin-right: 15px;
+      font-size: 30px;
 		}
 		.bloc {
-
+      margin: 0 auto;
+      width: 70%;
 		}
 		.
 	</style>

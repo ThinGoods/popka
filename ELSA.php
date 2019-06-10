@@ -1,71 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Про ELSA </title>
+  <title> ELSA </title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/about_ELSA.css">
+  <link rel="stylesheet" type="text/css" href="css/news.css">
 </head>
 <body>
   <?php require("nav.php"); ?>
-    <div class="container_for_elsa">
-      <div class="top_elsa"> Про ELSA </div>
-      <div class="container_for_p">
+<?php require_once __DIR__."/function/connectMySQL/connect_to_db.php";
+    global $mysqli;
+    connectDB();
+ 
+    $answer = $mysqli->query("SELECT * FROM `elsa` ORDER BY `id` ");
+    while(($row = $answer->fetch_assoc()) != false ){ $data[] = $row; }
+      foreach($data as $key=>$value){
+        foreach($value as $keyData => $valueData) { $currentData[] = $valueData; }
+  }     
 
-        <div class="p">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSA (The European Law Students' Association) — це міжнародна, незалежна, неполітична та неприбуткова організація, що об'єднує студенів-правників та молодих юристів, що зацікавлені в науковому та особистому вдосконаленні. Організація надає ідеальну базу для розвитку їхніх навичок, здобуття нових знань і спілкування з студентами права та юристами з усієї Європи. Сьогодні вона є однією з найбільших незалежних студентських організацій і представлена у більш ніж 300 правничих факультетах в 43 країнах Європи, членами якої є 50 000 студентів та молодих юристів.
+  for($i = 0; $i < count($currentData); $i++){
+    if( ($i % 5) == 0){
+      echo "
+        <div class='news'>
+          <div class='left_part_news'>
+            <img class='image_news' src= ".$currentData[$i+3].">
+           </div>
+          <div class='right_part_news'>
+        <div class='title_news'>".$currentData[$i+1]."</div>
+            <div class='short_description'>".mb_strimwidth($currentData[$i+2], 0, 200, '.....')."</div>
+            <a  class='a-normal' href='/popka/more_elsa.php?more&id=".$currentData[$i]."'><div class='more'>  Детальніше</div></a> 
+
+
+          </div>
         </div>
+        ";
+    }
+  }
 
-        <div class="p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ELSA Ukraine – це національна група міжнародної неполітичної неприбуткової Асоціації. ELSA Ukraine представлена в 11 регіонах нашої країни та налічує понад 600 активних членів. ELSA Ukraine є також самоврядною організацією, над розвитком якої працюють її офіцери – студенти права та молоді правники.
-        </div>
-
-        <div class="p">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Щорічно організовуються більше ніж 100 академічних заходів на рік, такі як: конкурси есе, зустрічі з практикуючими юристами, інституційні візити до органів державної влади, моделювання судових змагань та змагань з переговорів, панельні дискусії, навчальні візити в інші країни, семінари та конференції, національні стажування.
-        </div>
-
-        <div class="p">
-          Більше того, надаються міжнародні можливості, які пропонує ELSA International, такі як: літні та зимові правові школи, STEP-стажування (стажування за кордоном), делегації в міжнародні організації, міжнародні судові змагання.
-        </div>
-
-        <div class="short">ELSA Sumy діє в місті Суми з 2010 року.</div>
-
-        <div class="p">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сумський осередок розташований на базі Сумської філії Харківського Національного Університету Внутрішніх Справ. ELSA Sumy нараховує чималу кількість активних та перспективних студентів. З кожним роком організація все активніше розвивається, про що свідчить численна кількість заходів, проведених ELSA Sumy, наприклад:
-        </div>
-
-        <div class="list_elsa">
-          <li>  17 березня 2018 року на базі Сумської філії Харківського національного університету внутрішніх справ відбулася конференція-дискусія, організована Сумським осередком Європейської асоціації студентів-правників ELSA Sumy, на тему «Земельне право. Проблеми набуття права власності на землю».
-
-          <li>  11-12 березня 2017 року на базі Сумської філії Харківського національного університету внутрішніх справ пройшов Національний з’їзд президентів осередків Європейської асоціації студентів права (ELSA).
-          <li>  25 листопада 2017 року на базі Сумського осередку Європейської організації студентів-правників (ELSA Sumy) відбувся тренінг від членів колишнього та теперішнього національного правління, а саме Генерального секретаря 2016/2017 Сніжани Осарчук та Віце-президента з семінарів та конференцій 2017/2018 Ольги Березіної.
-          <li>  29 листопада 2017 року осередком Європейської організації студентів-правників (ELSA Sumy) було проведено панельну дискусію «Судова реформа. Прозоре правосуддя» в рамках заходів присвячених святкуванню ELSA Day.
-        </div>
+  /*-----------------------------
+     ВЫВОД НОВОСТЕЙ С БАЗЫ ДАННЫХ
+  -----------------------------*/
+?>
+<?php require("footer.php"); ?>
 
 
-        <div class="p">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сумський осередок Європейської асоціації студентів-права ELSA Sumy бере активну участь у національних заходах осередків Європейської асоціації студентів-права ELSA Ukraine, а саме:
-        </div>
 
-        <div class="list_elsa">
-          <li>  23-25 лютого 2018 року представники Сумського осередку Європейської асоціації студентів-права (ELSA Sumy) взяли участь у National Presidents' Meeting-2018 у м. Одеса;
-          <li>  24-25 березня 2018 року представники Сумського осередку Європейської асоціації студентів-права (ELSA Sumy) взяли участь у ІІ Національному з’їзді новачків (II National Fresher’s Camp) у м. Львів. Національний з’їзд новачків – щорічний захід, спрямований на отримання та поглиблення знань про мережу, членів ELSA;
-           <li>  у листопаді 2017 року представники Сумського осередку ELSA  взяли участь XXVII National Council Meeting ELSA Ukraine в м. Чернівці.
-        </div>
-
-      </div>
-
-      <div class="container_for_img">
-
-        <img src="img/about_elsa/1.jpg" class="images">
-        <img src="img/about_elsa/2.jpg" class="images">
-        <img src="img/about_elsa/3.jpg" class="images">
-        <img src="img/about_elsa/4.jpg" class="images">
-        <img src="img/about_elsa/5.jpg" class="images">
-        <img src="img/about_elsa/6.jpg" class="images">
-        <img src="img/about_elsa/7.jpg" class="images">
-        <img src="img/about_elsa/8.jpg" class="images">
-        <img src="img/about_elsa/9.jpg" class="images">
-
-      </div>
     </div>
 </body>
 </html>
