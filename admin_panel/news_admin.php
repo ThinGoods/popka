@@ -48,41 +48,207 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'], $_FILES['image'])
 	<meta charset="UTF-8">
 	<title>Новости</title>
 	<style>
-		.form_added, .form_deleted {
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: Arial;
+      transition: 0.5s; 
+    }
+		.form_deleted {
 		  display: flex;
 		  flex-direction: column;
 		  justify-content: center;
 		  align-items: center;
       margin-bottom: 15px;
+      width: 100%;
 		}
+    .title {
+      font-size: 20pt;
+      padding: 25px;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .form_added {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      margin: 0 auto;
+      width: 100%;
+
+    }
+    .inputs {
+      background-color: #e0fde0;
+      padding: 25px;
+      width: 100%;
+      border: 2px solid #353535;
+      border-bottom-left-radius: 45px;
+      border-top-right-radius: 45px;
+    }
+    .inputs[data-type="input-deleted"] {
+      background-color: #fdcbcb;
+    }
+    .inputs > div {
+       font-size: 15pt;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 5px 30px 5px 30px;
+    }
+    .inputs > div > textarea {
+      width: 55%;
+      height: 50px;
+      background-color: #353535;
+      color: white;
+      text-decoration: none;
+      font-size: 12pt;
+      padding: 15px;
+      transition: 0.2s;
+      border-radius: 15px;
+    }
+    .inputs > div > textarea[data-type="title"] {
+      text-align: center;
+      height: 40px;
+    }
+    .inputs > div > textarea[data-type="text"] {
+      height: 60px;
+    }
+
+    .inputs > div > textarea:focus {
+      outline: 0px;
+      border-radius: 25px;
+    }
+    .inputs > div > input[type="file"]  {
+      padding: 10px;
+      border: 2px solid #353535;
+      border-radius: 10px;
+      box-shadow: 0px 0px 2px black;
+    }
+    .inputs > div > input[type="date"]  {
+      padding: 10px;
+      border: 2px solid #353535;
+      border-radius: 10px;
+      box-shadow: 0px 0px 2px black;
+    }
+    .inputs > div > input[data-type="add"]  {
+      margin: 0 auto;
+      border: 2px solid #353535;
+      border-radius: 5px;
+      box-shadow: 0px 0px 2px black;
+      background-color: darkgreen;
+      color: white;
+      cursor: pointer;
+      width: 200px;
+      font-size: 15pt;
+      padding: 20px;
+    }
+    .inputs > div > input[data-type="remove"]  {
+      margin: 0 auto;
+      border: 2px solid #353535;
+      border-radius: 5px;
+      box-shadow: 0px 0px 2px black;
+      background-color: darkred;
+      color: white;
+      cursor: pointer;
+      width: 200px;
+      font-size: 15pt;
+      padding: 20px;
+    }
+    .inputs > div > input[type="text"]  {
+      border: 2px solid #353535;
+      border-radius: 5px;
+      box-shadow: 0px 0px 2px black;
+      background-color: #353535;
+      color: white;
+      width: 200px;
+      font-size: 15pt;      padding: 5px;
+      border: 2px solid #353535;
+      border-radius: 10px;
+      box-shadow: 0px 0px 2px black;
+      text-align: center;
+    }
+    hr {
+      border: 3px solid darkred;
+      margin-top: 50px;
+    }
 	</style>
 </head>
 <body>
+<?php require_once "nav.php";?>
+<div class="container">
 <form enctype="multipart/form-data" action="" method="post" class="form_added">
-  <div>Добавление новости</div>
-  Введите назвние новости: <textarea name="title">1</textarea>
-  Введите описание новости: <textarea name="full_text">2</textarea>
-  Выберите дату: <input type="date" name="date">
-  Выберите главную картинку: <input type="file" name="image">
-  Выберите дополнительную картинку 1: <input type="file" name="image1">
-  Выберите дополнительную картинку 2: <input type="file" name="image2">
-  Выберите дополнительную картинку 3: <input type="file" name="image3">
-  Выберите дополнительную картинку 4: <input type="file" name="image4">
-  Выберите дополнительную картинку 5: <input type="file" name="image5">
-  Выберите дополнительную картинку 6: <input type="file" name="image6">
-  Выберите дополнительную картинку 7: <input type="file" name="image7">
-  Выберите дополнительную картинку 8: <input type="file" name="image8">
-  Выберите дополнительную картинку 9: <input type="file" name="image9">
-  Выберите дополнительную картинку 10: <input type="file" name="image10">
-  <input type="submit" name="uploadBtn" value="Добавить"> 
+  <div>
+    <div class="title">Добавление новости</div>
+  </div>
+  <div class="inputs">
+  <div>
+    Введите назвние новости: <textarea name="title" data-type="title"></textarea>
+  </div>
+  <div>
+    Введите описание новости: <textarea name="full_text" data-type="text"></textarea>
+  </div>
+  <div>
+    Выберите дату: <input type="date" name="date">
+  </div>
+  <div>
+    Выберите главную картинку: <input type="file" name="image">
+  </div>
+  <div>
+    Выберите дополнительную картинку 1: <input type="file" name="image1">
+  </div>
+  <div>
+    Выберите дополнительную картинку 2: <input type="file" name="image2">
+  </div>
+  <div>
+    Выберите дополнительную картинку 3: <input type="file" name="image3">
+  </div>
+  <div>
+    Выберите дополнительную картинку 4: <input type="file" name="image4">
+  </div>
+  <div>
+    Выберите дополнительную картинку 5: <input type="file" name="image5">
+  </div>
+  <div>
+    Выберите дополнительную картинку 6: <input type="file" name="image6">
+  </div>
+  <div>
+    Выберите дополнительную картинку 7: <input type="file" name="image7">
+  </div>
+  <div>
+    Выберите дополнительную картинку 8: <input type="file" name="image8">
+  </div>
+  <div>
+    Выберите дополнительную картинку 9: <input type="file" name="image9">
+  </div>
+  <div>
+    Выберите дополнительную картинку 10: <input type="file" name="image10">
+  </div>
+  <br>
+  <div><input type="submit" name="uploadBtn" value="Добавить" data-type="add"> </div>
+  </div>
+  
 </form>
+</div>
 <hr>
+<div class="container">
 <form action="deleted_news.php" method="post" class="form_deleted">
-  <div>Удаление новости</div>
-  Введите ID записи: <input type="text" name="id">
-  <input type="submit" name="deletedBtn" value="Удалить">
+  <div>
+    <div class="title">Удаление новости</div>
+  </div>
+  <div class="inputs" data-type="input-deleted">
+    <div>Введите ID записи: <input type="text" name="id"></div>
+    <br>
+    <div><input type="submit" name="deletedBtn" value="Удалить"  data-type="remove"></div>
+  </div>
+  
 </form>
-<hr>
-<a href="index.php">Вернуться назад</a>
+<div>
 </body>
 </html>

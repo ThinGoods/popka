@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style>
 		.title {
-
  			color: black;
   		text-align: center;
   		padding: 10px;
@@ -13,7 +12,6 @@
       font-size: 25px;
       margin: 0 auto;
       width: 70%;
-
 		}
 		.list {
 			font-size: 20px;
@@ -24,11 +22,13 @@
   		padding: 10px;
    		margin: 10px;
    		background-color: #8cd8a4;
+      transition: 0.3s;
 		}
 		.list:hover {
 		  padding: 15px;
       margin-right: 15px;
       font-size: 30px;
+
 		}
 		.bloc {
       margin: 0 auto;

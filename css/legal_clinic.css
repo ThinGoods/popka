@@ -1,9 +1,8 @@
 .headerok {
       display: flex;
-/*      justify-content: center;*/
+      justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 70%;
 
 
       font-size: 20px;
@@ -13,26 +12,21 @@
       border-radius: 15px;
       padding: 10px;
       margin: 10px;
+      width: 100%;
       background-color: #8cd8a4;
 }
 .images {
       width: 500px;
       border-radius: 20px;
       transition: 0.5s;
-      margin: 30px;
+      margin: 0 auto;
       cursor: pointer;
 }
 .images:hover {
       width: 550px;
-
 }
+
 .p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 70%;
-      margin: 0 auto;
       border-bottom: 2px solid #0e5861;
 }
 .p > a {
@@ -41,7 +35,6 @@
 .p > a:hover {
   color: #0e5868;
   cursor: pointer;
-  font-size: 17px;
   transition: 0.5s;
 
 }

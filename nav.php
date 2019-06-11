@@ -2,7 +2,7 @@
   <img src="img/bigicon/icona.png" alt="Лого" class="icona">
   <div class="top_text">
   	<?php 
-      require_once __DIR__."/function/connectMySQL/connect_to_db.php";
+      require_once "function/connectMySQL/connect_to_db.php";
       global $mysqli;
       connectDB();
       $title = $mysqli->query("SELECT `title` FROM `settings`");
@@ -27,7 +27,8 @@
     </div>
   </div>
 
-  <div class="menu_item"> <a href="struktura_filii.php"> Структура філії </a></div>
+<!-- послан и не найден 
+  <div class="menu_item"> <a href="struktura_filii.php"> Структура філії </a></div> -->
   <div class="menu_item"> <a href="international_activity.php"> Міжнародна діяльність </a></div>
   <div class="menu_item"> <a href="science.php"> Наука </a></div>
 
