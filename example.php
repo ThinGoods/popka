@@ -38,6 +38,7 @@ foreach($data as $key=>$value){
 }        
 ?>
   </div>
+  <?php require("footer.php"); ?>
 </body>
 <script type="text/javascript">
   console.log("Hello");

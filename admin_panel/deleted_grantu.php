@@ -13,10 +13,10 @@ connectDB();
 
 if(isset($_POST['id'])) {
   $id = $_POST['id'];
-  $sql = "DELETE FROM `international_activity` WHERE `id` = '$id'";
+  $sql = "DELETE FROM `grantu` WHERE `id` = '$id'";
   if ($mysqli->query($sql) === TRUE) { echo "<div id='warning'>Запис с ID = $id видалено</div>"; } 
   else { echo "<div id='warning'>Помилка при видаленні, спробуйте ще раз.</div>"; }
-  echo "<div><a href='international_activity.php'>Вернуться назад</a></div>";
+  echo "<div><a href='grantu.php'>Вернуться назад</a></div>";
 }
 ?>
 </div>

@@ -60,16 +60,26 @@
     }
 
 .description_text_parlament {
-  font-size: 20px;
-
-  display: flex;
-  text-align: center;
+  border-left: 8px solid #0e5861;
+  padding-left: 5px;
+  font-size: 15pt;
+  text-align: justify;
+  margin: 20px;
 }
 .container_for_everything {
+  margin: 0 auto;
       width: 70%;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
 
+}
+.title_S {
+  margin: 15px;
+  font-size: 20pt;
+}
+.students_parlament {
+  font-size: 20pt;
+  margin: 20px;
 }

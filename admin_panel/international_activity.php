@@ -38,8 +38,12 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'])) {
   $sql = "INSERT INTO `international_activity` (`title`, `img`, `long_text`, `date`) VALUES ('$title', '$full_src', '$full_text', '$date')";
   if ($mysqli->query($sql) === TRUE) {
     // if(empty($errors)) { move_uploaded_file($image_temp, "../img/".$image_name); }
-    echo "Запись успешно добавлена";
-  } else { echo "Error: " . $sql . "<br>" . $mysqli->error; }
+    echo "<div id='notification'>Запис успішно додано.</div>";
+  } else { echo "<div id='notification'>Помилка в отправці форми, спробуйте ще раз.</div>"; }
+}
+
+else {
+  echo "<div id='notification'>Заповніть всі поля.</div>";
 }
 ?>
 
@@ -48,6 +52,7 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'])) {
 <head>
 	<meta charset="UTF-8">
 	<title> Міжнародна діяльність </title>
+  <link rel="stylesheet" type="text/css" href="main.css">
 	<style>
 		.form_added, .form_deleted {
 		  display: flex;
@@ -56,33 +61,43 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'])) {
 		  align-items: center;
           margin-bottom: 15px;
 		}
+      body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+    transition: 0.5s;
 	</style>
 </head>
 <body>
+   <?php require_once "nav.php" ?>
+   <div class="container">
 <form enctype="multipart/form-data" action="" method="post" class="form_added">
-  <div>Добавление новости</div>
-  Введите назвние новости: <textarea name="title">1</textarea>
-  Введите описание новости: <textarea name="full_text">2</textarea>
-  Выберите дату: <input type="date" name="date">
-  Выберите дополнительную картинку 1: <input type="file" name="image1">
-  Выберите дополнительную картинку 2: <input type="file" name="image2">
-  Выберите дополнительную картинку 3: <input type="file" name="image3">
-  Выберите дополнительную картинку 4: <input type="file" name="image4">
-  Выберите дополнительную картинку 5: <input type="file" name="image5">
-  Выберите дополнительную картинку 6: <input type="file" name="image6">
-  Выберите дополнительную картинку 7: <input type="file" name="image7">
-  Выберите дополнительную картинку 8: <input type="file" name="image8">
-  Выберите дополнительную картинку 9: <input type="file" name="image9">
-  Выберите дополнительную картинку 10: <input type="file" name="image10">
-  <input type="submit" name="uploadBtn" value="Добавить"> 
+  <div><div class="title">Додавання новини Міжнародної діяльності</div></div>
+  <div class="inputs"><div>Введіть назву новини: <textarea name="title"></textarea></div>
+  <div>Введіть опис новини: <textarea name="full_text"></textarea></div>
+  <div>Виберіть дату: <input type="date" name="date"></div>
+  <div>Виберіть додаткове зображення 1: <input type="file" name="image1"></div>
+  <div>Виберіть додаткове зображення 2: <input type="file" name="image2"></div>
+  <div>Виберіть додаткове зображення 3: <input type="file" name="image3"></div>
+  <div>Виберіть додаткове зображення 4: <input type="file" name="image4"></div>
+  <div>Виберіть додаткове зображення 5: <input type="file" name="image5"></div>
+  <div>Виберіть додаткове зображення 6: <input type="file" name="image6"></div>
+  <div>Виберіть додаткове зображення 7: <input type="file" name="image7"></div>
+  <div>Виберіть додаткове зображення 8: <input type="file" name="image8"></div>
+  <div>Виберіть додаткове зображення 9: <input type="file" name="image9"></div>
+  <div>Виберіть додаткове зображення 10: <input type="file" name="image10"></div>
+  <div><input type="submit" name="uploadBtn" value="Додати" data-type="add"></div>
+</div>
 </form>
+</div>
 <hr>
+<div class="container">
 <form action="deleted_international_activity.php" method="post" class="form_deleted">
-  <div>Удаление новости</div>
-  Введите ID записи: <input type="text" name="id">
-  <input type="submit" name="deletedBtn" value="Удалить">
+  <div><div class="title" >Видалення новини Міжнародної діяльності</div></div>
+  <div class="inputs" data-type="input-deleted"><div>Введіть ID запису: <input type="text" name="id"></div>
+  <div><input type="submit" name="deletedBtn" value="Видалити" data-type="remove"></div>
+</div>
 </form>
-<hr>
-<a href="index.php">Вернуться назад</a>
+</div>
 </body>
 </html>

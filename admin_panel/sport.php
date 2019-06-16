@@ -3,11 +3,11 @@ require_once "../function/connectMySQL/connect_to_db.php";
 global $mysqli;
 connectDB();
 
-if(isset($_POST['title'], $_POST['full_text'], $_POST['date'], $_FILES['image'])) {
+if(isset($_POST['title'], $_POST['full_text'], $_FILES['image'])) {
   $errors = array();
   $image_name = $_FILES['image']['name'];
   $image_temp = $_FILES['image']['tmp_name'];
-  $full_image_src = 'img/'.$image_name;
+  $full_image_src = 'img/sport/'.$image_name;
   $full_src = '';
 
   function addOptionalImage($image) {
@@ -15,9 +15,9 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'], $_FILES['image'])
     if($image['name']) {
       $image_optional_name = $image['name'];
       $image_optional_temp = $image['tmp_name'];
-      $full_optional_image_src = 'img/'.$image_optional_name;
+      $full_optional_image_src = 'img/sport/'.$image_optional_name;
       $full_src .= $full_optional_image_src.'$';
-      move_uploaded_file($image_optional_temp, "../img/".$image_optional_name);
+      move_uploaded_file($image_optional_temp, "../img/sport/".$image_optional_name);
     }
   }
   addOptionalImage($_FILES['image1']);
@@ -34,10 +34,9 @@ if(isset($_POST['title'], $_POST['full_text'], $_POST['date'], $_FILES['image'])
   //echo $full_src;
   $title = $_POST['title'];
   $full_text = $_POST['full_text'];
-  $date = $_POST['date'];
-  $sql = "INSERT INTO `news` (`title`, `images`, `full_text`, `date`, `img`) VALUES ('$title', '$full_src', '$full_text', '$date', '$full_image_src')";
+  $sql = "INSERT INTO `sport` (`title`, `images`, `description`, `img`) VALUES ('$title', '$full_src', '$full_text',  '$full_image_src')";
   if ($mysqli->query($sql) === TRUE) {
-    if(empty($errors)) { move_uploaded_file($image_temp, "../img/".$image_name); }
+    if(empty($errors)) { move_uploaded_file($image_temp, "../img/sport/".$image_name); }
     echo "<div id='notification'>Запис успішно додано.</div>";
   } else { echo "<div id='notification'>Помилка в отправці форми, спробуйте ще раз.</div>"; }
 }
@@ -49,7 +48,7 @@ else {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Новости</title>
+	<title>Новини про Спорт</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 	<style>
     body {
@@ -194,7 +193,7 @@ else {
 <div class="container">
 <form enctype="multipart/form-data" action="" method="post" class="form_added">
   <div>
-    <div class="title">Додавання новини:</div>
+    <div class="title">Додавання новини про спорт:</div>
   </div>
   <div class="inputs">
   <div>
@@ -202,9 +201,6 @@ else {
   </div>
   <div>
     Введіть опис новини: <textarea name="full_text" data-type="text"></textarea>
-  </div>
-  <div>
-    Виберіть дату: <input type="date" name="date">
   </div>
   <div>
     Виберіть головну картинку: <input type="file" name="image">
@@ -247,9 +243,9 @@ else {
 </div>
 <hr>
 <div class="container">
-<form action="deleted_news.php" method="post" class="form_deleted">
+<form action="deleted_sport.php" method="post" class="form_deleted">
   <div>
-    <div class="title">Видалення новини</div>
+    <div class="title">Видалення новини про спорт</div>
   </div>
   <div class="inputs" data-type="input-deleted">
     <div>Введіть ID новини: <input type="text" name="id"></div>

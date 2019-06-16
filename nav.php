@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 <div class="top">
   <img src="img/bigicon/icona.png" alt="Лого" class="icona">
   <div class="top_text">
@@ -36,7 +37,7 @@
     <div class="hide_menu"> 
       <a href="general_info.php"><div class="submenu_item"> Загальна інформація </div></a>
       <a href="ymovu_vstypy.php"><div class="submenu_item"> Умови вступу </div></a>
-      <a href="pidgotovchi_kyrsu.php"><div class="submenu_item"> Підготовчі курси </div></a>
+      <!-- <a href="pidgotovchi_kyrsu.php"><div class="submenu_item"> Підготовчі курси </div></a> -->
       <a href="Q_A.php"><div class="submenu_item"> Питання - відповіді </div></a>
     </div>
   </div>

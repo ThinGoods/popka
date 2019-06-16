@@ -1,50 +1,43 @@
 <?php 
-  require_once "../function/connectMySQL/connect_to_db.php";
-  global $mysqli;
-  connectDB();
-  if(isset($_POST['name'], $_POST['level'], $_POST['position'], $_POST['day'], $_POST['time'], $_FILES['image'])) {
-    $errors = array();
-    $image_name = $_FILES['image']['name'];
-    $image_temp = $_FILES['image']['tmp_name'];
-    $full_image_src = 'img/leadership/'.$image_name;
-    $name = $_POST['name'];
-    $level = $_POST['level'];
-    $position = $_POST['position'];
-    $day = $_POST['day'];
-    $time = $_POST['time'];
-    $sql = "INSERT INTO `leadership` (`name`, `date`, `description`, `time`, `posision`, `img`) VALUES ('$name', '$day', '$level', '$time', '$position', '$full_image_src')";
-    if ($mysqli->query($sql) === TRUE) {
-      if(empty($errors)) { move_uploaded_file($image_temp, "../img/leadership/".$image_name); }
-      echo "<div id='notification'>Запис успішно додано.</div>";
-    } else { echo "<div id='notification'>Помилка в отправці форми, спробуйте ще раз.</div>"; }
-  }
-  else {
+require_once "../function/connectMySQL/connect_to_db.php";
+global $mysqli;
+connectDB();
+
+if(isset($_POST['title'], $_POST['full_text'])) {
+  $errors = array();
+  $title = $_POST['title'];
+  $full_text = $_POST['full_text'];
+  $sql = "INSERT INTO `grantu` (`title`, `description`) VALUES ('$title', '$full_text')";
+  if ($mysqli->query($sql) === TRUE) {
+    echo "<div id='notification'>Запис успішно додано.</div>";
+  } else { echo "<div id='notification'>Помилка в отправці форми, спробуйте ще раз.</div>"; }
+}
+else {
   echo "<div id='notification'>Заповніть всі поля.</div>";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Керівництво</title>
+	<title>Грантова підтримка</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 	<style>
     body {
       margin: 0px;
       padding: 0px;
       font-family: Arial;
-      transition: 0.5s;
+      transition: 0.5s; 
     }
     /*
-    .form_deleted {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+		.form_deleted {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
       margin-bottom: 15px;
       width: 100%;
-    }
+		}
     .title {
       font-size: 20pt;
       padding: 25px;
@@ -108,18 +101,6 @@
       outline: 0px;
       border-radius: 25px;
     }
-    .inputs > div > input[type="file"]  {
-      padding: 10px;
-      border: 2px solid #353535;
-      border-radius: 10px;
-      box-shadow: 0px 0px 2px black;
-    }
-    .inputs > div > input[type="date"]  {
-      padding: 10px;
-      border: 2px solid #353535;
-      border-radius: 10px;
-      box-shadow: 0px 0px 2px black;
-    }
     .inputs > div > input[data-type="add"]  {
       margin: 0 auto;
       border: 2px solid #353535;
@@ -168,32 +149,38 @@
 	</style>
 </head>
 <body>
-   <?php require_once "nav.php" ?>
+<?php require_once "nav.php";?>
 <div class="container">
-<form enctype="multipart/form-data" action="" method="post" class="form_added">
+<form action="" method="post" class="form_added">
   <div>
-    <div class="title">Додати керівництво</div>
+    <div class="title">Додавання запису Грантової підтримки</div>
   </div>
   <div class="inputs">
-    <div>Введіть повне ім’я: <textarea name="name" data-type="title"></textarea></div>
-    <div>Введіть наукову ступінь: <textarea name="level" data-type="title"></textarea></div>
-    <div>Введіть посаду: <textarea name="position" data-type="title"></textarea></div>
-    <div>Введіть день прийому: <textarea name="day" data-type="title"></textarea></div>
-    <div>Введіть години прийому: <textarea name="time" data-type="title"></textarea></div>
-    <div>Виберіть фото: <input type="file" name="image" data-type="file"></div>
-    <div><input type="submit" name="uploadBtn" value="Додати" data-type="add"></div>
-  </div> 
+  <div>
+    Введіть назву: <textarea name="title" data-type="title"></textarea>
+  </div>
+  <div>
+    Введіть посилання: <textarea name="full_text" data-type="text"></textarea>
+  </div>
+  <br>
+  <div><input type="submit" name="uploadBtn" value="Додати" data-type="add"> </div>
+  </div>
+  
 </form>
 </div>
 <hr>
 <div class="container">
-<form action="deleted_leadership.php" method="post" class="form_deleted">
-  <div><div class="title">Видалити керівництво</div></div>
-  <div class="inputs" data-type="input-deleted"><div>Введіть повне ім’я людини: <input type="text" name="name"></div>
-  <div><input type="submit" name="deletedBtn" value="Видалити" data-type="remove"></div>
+<form action="deleted_grantu.php" method="post" class="form_deleted">
+  <div>
+    <div class="title">Видалення запису Грантової підтримки</div>
   </div>
+  <div class="inputs" data-type="input-deleted">
+    <div>Введіть ID: <input type="text" name="id"></div>
+    <br>
+    <div><input type="submit" name="deletedBtn" value="Видалити"  data-type="remove"></div>
+  </div>
+  
 </form>
-</div>
-
+<div>
 </body>
 </html>

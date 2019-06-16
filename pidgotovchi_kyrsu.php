@@ -12,5 +12,6 @@
   	<div class="head"> Підготовчі курси </div>
   	<div class="main">  </div>
   </div>
+  <?php require("footer.php"); ?>
 </body>
 </html>

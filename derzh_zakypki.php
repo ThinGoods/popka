@@ -15,6 +15,6 @@
 <body>
   <?php require("nav.php"); ?>
   <div class="derzh_zakypki"> Державні закупівлі </div>
-
+<?php require("footer.php"); ?>
 </body>
 </html>

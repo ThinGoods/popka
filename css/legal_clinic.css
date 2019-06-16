@@ -19,7 +19,7 @@
       width: 500px;
       border-radius: 20px;
       transition: 0.5s;
-      margin: 0 auto;
+      margin: 5px auto;
       cursor: pointer;
 }
 .images:hover {
@@ -28,13 +28,55 @@
 
 .p {
       border-bottom: 2px solid #0e5861;
+      padding: 10px;
+      margin: 15px;
 }
 .p > a {
-  color: red;
+  color: green;
 }
 .p > a:hover {
   color: #0e5868;
   cursor: pointer;
   transition: 0.5s;
+}
+.a1 {
+  width: 500px;
+  height: 370px;
+  border-radius: 20px;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.a1:hover {
+  width: 515px;
+  height: 380px;
+}
+.cont_li {
+  padding: 10px;
+}
+.cont_li > li {
+  margin: 5px;
+}
+.duo {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 500px;
 
+}
+
+    .everything {
+      font-size: 15pt;
+
+      margin: 0 auto;
+      width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+#adress {
+  border-radius: 10px;
+  border-color: green;
+  border: 2px;
 }

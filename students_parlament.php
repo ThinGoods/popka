@@ -26,8 +26,8 @@
         }
      ?> 
 <div class="container_for_everything">
-<div>Студентський парламент</div>
-<div class="description_text_parlament"><?php echo $description_true; ?></div>
+<div class="title_S">Студентський парламент</div>
+<div class="description_text_parlament">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $description_true; ?></div>
 <div class="students_parlament"> Студентський парламент Сумської філії Харківського національного університету внутрішніх справ </div>
   <?php
     for($i = 0; $i < count($currentDataLeaderStudent); $i++){
@@ -44,5 +44,6 @@
 	  }
 	?>  
 </div>   
+<?php require("footer.php"); ?>
 </body>
 </html>

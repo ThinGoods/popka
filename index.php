@@ -3,7 +3,7 @@
 <head>
 	<title> 
 	  <?php 
-	    require_once __DIR__."/function/connectMySQL/connect_to_db.php";
+	    require_once __DIR__."../function/connectMySQL/connect_to_db.php";
 	    global $mysqli;
 	    connectDB();
 	    $title = $mysqli->query("SELECT `ABC` FROM `settings`");
@@ -16,7 +16,7 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/news.css">
-	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+	
 	<style>
 		html * {text-decoration: none;}
 	</style>
